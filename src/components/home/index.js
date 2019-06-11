@@ -1,6 +1,7 @@
 import React from 'react'
 import { push } from 'connected-react-router'
 import { connect } from 'react-redux'
+import Header from '../common/Header'
 import {
   increment,
   incrementAsync,
@@ -23,6 +24,7 @@ const Home = props => {
 
   return (
     <div>
+      <Header />
       <h1>Home</h1>
       <p>Count: {count}</p>
 
