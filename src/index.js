@@ -1,22 +1,19 @@
+import 'core-js'
 import React from 'react'
-import { render } from 'react-dom'
+import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
-import { ConnectedRouter } from 'connected-react-router'
-import store, { history } from './store'
-import App from './containers/app'
-
-import 'sanitize.css/sanitize.css'
-import './index.css'
+import { ConnectedRouter as Router } from 'connected-react-router'
+import store from './store'
+import history from './history/history'
+import App from './components/App'
 
 const target = document.querySelector('#root')
 
-render(
+ReactDOM.render(
   <Provider store={store}>
-    <ConnectedRouter history={history}>
-      <div>
-        <App />
-      </div>
-    </ConnectedRouter>
+    <Router history={history}>
+      <App />
+    </Router>
   </Provider>,
   target
 )
