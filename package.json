@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "react custom boilerplate with redux, react-router",
   "private": false,
-  "homepage": "https://github.com/aj-anuragjain/create-react-app-redux",
   "scripts": {
     "start": "react-scripts start",
     "start:prod": "serve -s ./build",
