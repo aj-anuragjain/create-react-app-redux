@@ -1,11 +1,15 @@
-import React, { Fragment } from 'react'
+import React from 'react'
+import { Switch, Route } from 'react-router-dom'
+import Home from './home'
+import About from './about'
 
-import Routes from './Routes'
+import { HOME_PAGE_URL, ABOUT_PAGE_URL } from '../helpers/constants'
 
 const App = () => (
-  <Fragment>
-    <Routes />
-  </Fragment>
+  <Switch>
+    <Route exact path={HOME_PAGE_URL} component={Home} />
+    <Route exact path={ABOUT_PAGE_URL} component={About} />
+  </Switch>
 )
 
 export default App
