@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import { ConnectedRouter as Router } from 'connected-react-router'
 import store from './store'
-import history from './history/history'
+import history from './history'
 import App from './components/App'
 
 const target = document.querySelector('#root')
