@@ -1,9 +1,9 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
-import Home from './home'
-import About from './about'
+import Home from './containers/Home'
+import About from './containers/About'
 
-import { HOME_PAGE_URL, ABOUT_PAGE_URL } from '../helpers/constants'
+import { HOME_PAGE_URL, ABOUT_PAGE_URL } from './constants/url'
 
 const App = () => (
   <Switch>

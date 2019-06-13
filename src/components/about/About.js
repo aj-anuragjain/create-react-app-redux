@@ -1,6 +1,8 @@
 import React from 'react'
-import Header from '../common/Header'
+import Header from '../shared/Header'
 import imgPlaceholder from '../../assets/images/placeholder.png'
+
+import './style/about.css'
 
 const About = () => (
   <div>

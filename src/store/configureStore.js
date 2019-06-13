@@ -2,7 +2,7 @@ import { createStore, applyMiddleware, compose } from 'redux'
 import { connectRouter, routerMiddleware } from 'connected-react-router'
 import thunk from 'redux-thunk'
 import reduxLogger from 'redux-logger'
-import history from '../history'
+import history from '../history/createBrowserHistory'
 import rootReducer from '../reducers'
 
 const initialState = {}

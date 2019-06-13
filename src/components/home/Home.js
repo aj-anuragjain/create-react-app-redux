@@ -1,14 +1,7 @@
 import React from 'react'
-import { push } from 'connected-react-router'
-import { connect } from 'react-redux'
-import Header from '../common/Header'
-import {
-  increment,
-  incrementAsync,
-  decrement,
-  decrementAsync
-} from '../../actions'
-import { ABOUT_PAGE_URL } from '../../helpers/constants'
+import Header from '../shared/Header'
+
+import './sytle/home.css'
 
 const Home = props => {
   const {
@@ -19,7 +12,7 @@ const Home = props => {
     decrementAsync,
     isIncrementing,
     isDecrementing,
-    LinkToAboutPage
+    linkToAboutPage
   } = props
 
   return (
@@ -43,23 +36,10 @@ const Home = props => {
       </p>
 
       <p>
-        <button onClick={LinkToAboutPage}>Go to about page via redux</button>
+        <button onClick={linkToAboutPage}>Go to about page via redux</button>
       </p>
     </div>
   )
 }
 
-export default connect(
-  ({ counter }) => ({
-    count: counter.count,
-    isIncrementing: counter.isIncrementing,
-    isDecrementing: counter.isDecrementing
-  }),
-  {
-    increment,
-    incrementAsync,
-    decrement,
-    decrementAsync,
-    LinkToAboutPage: () => push(ABOUT_PAGE_URL)
-  }
-)(Home)
+export default Home

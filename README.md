@@ -1,5 +1,10 @@
 # Boilerplate with Create-React-App && Redux
 
+**Prerequisite(s)**
+
+Node >= 8.16.0  
+Yarn (or) NPM
+
 ## Development Commands
 
 **Yarn**

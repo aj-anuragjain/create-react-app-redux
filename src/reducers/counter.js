@@ -4,11 +4,13 @@ import {
   INCREMENT,
   DECREMENT_REQUESTED,
   DECREMENT
-} from '../actions/actionTypes'
+} from '../constants/actionTypes'
 
 export default (state = counterInitialState, action) => {
   switch (action.type) {
     case INCREMENT_REQUESTED:
+      // always return nextState as new reference or new state
+      // never alter previousState state variable
       return {
         ...state,
         isIncrementing: true

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import { HOME_PAGE_URL, ABOUT_PAGE_URL } from '../../helpers/constants'
+import { HOME_PAGE_URL, ABOUT_PAGE_URL } from '../../constants/url'
 
 const Header = () => (
   <header>
