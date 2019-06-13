@@ -4,7 +4,7 @@ import {
   CLEAR_EMPLOYEE_LIST,
   REQUEST_ERROR_EMPLOYEE_LIST
 } from '../constants/actionTypes'
-import request from 'superagent'
+import axios from 'axios'
 
 const { REACT_APP_API_BASE_URL } = process.env
 
@@ -25,23 +25,17 @@ export function requestEmployeeList() {
     dispatch({ type: REQUESTED_EMPLOYEE_LIST })
 
     const apiURL = `${REACT_APP_API_BASE_URL}/employees`
-    return request
+    return axios
       .get(apiURL)
       .then(response => {
-        // convert array response to object
-        // required in case where response is of type array
-        dispatch(
-          getEmployeeList({
-            data: response.body
-          })
-        )
+        dispatch(getEmployeeList(response.data))
       })
       .catch(error => {
         dispatch(
           requestErrorEmployeeList({
             error: true,
-            statusCode: error.status,
-            statusText: error.body.message
+            statusCode: error.response.status,
+            statusText: error.response.statusText
           })
         )
       })

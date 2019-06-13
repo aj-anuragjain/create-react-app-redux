@@ -1,7 +1,7 @@
 import {
   REQUESTED_EMPLOYEE_LIST,
   GET_EMPLOYEE_LIST,
-  REQUEST_ERROR_EMPLOYEE_DETAIL,
+  REQUEST_ERROR_EMPLOYEE_LIST,
   CLEAR_EMPLOYEE_LIST
 } from '../constants/actionTypes'
 import { employeeListInitialState, errorInitialState } from './initialState'
@@ -21,11 +21,12 @@ export default function(state = employeeListInitialState, action) {
         isRequested: !state.isRequested
       }
 
-    case REQUEST_ERROR_EMPLOYEE_DETAIL: {
-      const { statusCode, statusText } = action.payload
+    case REQUEST_ERROR_EMPLOYEE_LIST: {
+      const { statusCode, statusText, error } = action.payload
       return {
         ...errorInitialState,
         isRequested: !state.isRequested,
+        error,
         statusCode,
         statusText
       }

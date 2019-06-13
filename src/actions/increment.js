@@ -1,13 +1,13 @@
 import { INCREMENT_REQUESTED, INCREMENT } from '../constants/actionTypes'
 
-export const increment = () => {
+export function increment() {
   return dispatch => {
     dispatch({ type: INCREMENT_REQUESTED })
     dispatch({ type: INCREMENT })
   }
 }
 
-export const incrementAsync = () => {
+export function incrementAsync() {
   return dispatch => {
     dispatch({ type: INCREMENT_REQUESTED })
 

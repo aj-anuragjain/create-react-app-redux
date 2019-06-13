@@ -4,7 +4,7 @@ import {
   CLEAR_EMPLOYEE_DETAIL,
   REQUEST_ERROR_EMPLOYEE_DETAIL
 } from '../constants/actionTypes'
-import request from 'superagent'
+import axios from 'axios'
 
 const { REACT_APP_API_BASE_URL } = process.env
 
@@ -25,21 +25,17 @@ export function requestEmployeeDetail(employeeId) {
     dispatch({ type: REQUESTED_EMPLOYEE_DETAIL })
 
     const apiURL = `${REACT_APP_API_BASE_URL}/employee/${employeeId}`
-    return request
+    return axios
       .get(apiURL)
       .then(response => {
-        dispatch(
-          getEmployeeDetail({
-            data: response.body
-          })
-        )
+        dispatch(getEmployeeDetail(response.data))
       })
       .catch(error => {
         dispatch(
           requestErrorEmployeeDetail({
             error: true,
-            statusCode: error.status,
-            statusText: error.body.message
+            statusCode: error.response.status,
+            statusText: error.response.statusText
           })
         )
       })

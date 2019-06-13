@@ -1,9 +1,11 @@
 import React from 'react'
 import Header from '../shared/Header'
+import TopGrid from '../shared/TopGrid'
+import { Button } from 'antd'
 
 import './sytle/home.css'
 
-const Home = props => {
+function Home(props) {
   const {
     count,
     increment,
@@ -11,34 +13,39 @@ const Home = props => {
     decrement,
     decrementAsync,
     isIncrementing,
-    isDecrementing,
-    linkToAboutPage
+    isDecrementing
   } = props
 
   return (
-    <div>
+    <TopGrid>
       <Header />
       <h1>Home</h1>
       <p>Count: {count}</p>
 
       <p>
-        <button onClick={increment}>Increment</button>
-        <button onClick={incrementAsync} disabled={isIncrementing}>
+        <Button type="primary" onClick={increment}>
+          Increment
+        </Button>
+        <Button
+          type="danger"
+          onClick={incrementAsync}
+          disabled={isIncrementing}>
           Increment Async
-        </button>
+        </Button>
       </p>
 
       <p>
-        <button onClick={decrement}>Decrement</button>
-        <button onClick={decrementAsync} disabled={isDecrementing}>
+        <Button type="primary" onClick={decrement}>
+          Decrement
+        </Button>
+        <Button
+          type="danger"
+          onClick={decrementAsync}
+          disabled={isDecrementing}>
           Decrement Async
-        </button>
+        </Button>
       </p>
-
-      <p>
-        <button onClick={linkToAboutPage}>Go to about page via redux</button>
-      </p>
-    </div>
+    </TopGrid>
   )
 }
 

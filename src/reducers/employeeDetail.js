@@ -22,10 +22,11 @@ export default function(state = employeeDetailInitialState, action) {
       }
 
     case REQUEST_ERROR_EMPLOYEE_DETAIL: {
-      const { statusCode, statusText } = action.payload
+      const { statusCode, statusText, error } = action.payload
       return {
         ...errorInitialState,
         isRequested: !state.isRequested,
+        error,
         statusCode,
         statusText
       }

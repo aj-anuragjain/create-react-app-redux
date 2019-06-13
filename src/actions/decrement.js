@@ -1,6 +1,6 @@
 import { DECREMENT_REQUESTED, DECREMENT } from '../constants/actionTypes'
 
-export const decrement = () => {
+export function decrement() {
   return dispatch => {
     dispatch({
       type: DECREMENT_REQUESTED
@@ -12,7 +12,7 @@ export const decrement = () => {
   }
 }
 
-export const decrementAsync = () => {
+export function decrementAsync() {
   return dispatch => {
     dispatch({
       type: DECREMENT_REQUESTED
