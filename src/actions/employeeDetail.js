@@ -6,7 +6,7 @@ import {
 } from '../constants/actionTypes'
 import axios from 'axios'
 
-const { REACT_APP_API_BASE_URL } = process.env
+import REACT_APP_API_BASE_URL from '../apis'
 
 export function getEmployeeDetail(payload) {
   return { type: GET_EMPLOYEE_DETAIL, payload }
