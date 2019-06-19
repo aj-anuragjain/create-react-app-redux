@@ -1,3 +1,45 @@
 {
-  "extends": "react-app"
+  "extends": ["airbnb", "prettier", "prettier/react"],
+  "plugins": ["prettier"],
+  "env": {
+    "browser": true
+  },
+  "globals": {
+    "window": true,
+    "document": true,
+    "localStorage": true,
+    "FormData": true,
+    "FileReader": true,
+    "Blob": true,
+    "navigator": true
+  },
+  "parser": "babel-eslint",
+  "rules": {
+    "indent": ["error", 2, {"SwitchCase": 1 }],
+    "object-curly-spacing": ["error", "never"],
+    "react/jsx-filename-extension": [".js"],
+    "space-before-blocks": ["error", "never"],
+    "space-before-function-paren": ["error", "never"],
+    "keyword-spacing": ["error", {"overrides": {"if": {"after": false}, "else": {"after": false}, "for": {"after": false}}}],
+    "no-plusplus": ["error", {"allowForLoopAfterthoughts": true}],
+    "no-use-before-define": ["error", { "functions": false, "classes": false}],
+    "camelcase": 0,
+    "no-unused-vars": ["error", {"vars": "local", "args": "none", "ignoreRestSiblings": false}],
+    "react/forbid-prop-types": 0,
+    "react/prop-types": 0,
+    "react/button-has-type": 0,
+    "react/destructuring-assignment": 0,
+    "no-nested-ternary": 0,
+    "jsx-a11y/click-events-have-key-events": 0,
+    "jsx-a11y/no-noninteractive-element-interactions": 0,
+    "jsx-a11y/no-static-element-interactions": 0,
+    "import/no-cycle": 0,
+    "react/no-multi-comp": 0,
+    "react/no-danger": 0,
+    "jsx-a11y/label-has-for": 0,
+    "react/no-array-index-key": 0,
+    "no-shadow": 1,
+    "no-useless-escape": 1,
+    "consistent-return": 0
+  }
 }
