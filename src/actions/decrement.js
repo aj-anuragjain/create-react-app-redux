@@ -3,7 +3,7 @@ import {DECREMENT_REQUESTED, DECREMENT} from '../constants/actionTypes'
 export function decrement() {
   return dispatch => {
     dispatch({
-      // type: DECREMENT_REQUESTED,
+      type: DECREMENT_REQUESTED,
     })
 
     dispatch({
