@@ -1,5 +1,5 @@
 import React from 'react'
-import { Switch, Route } from 'react-router-dom'
+import {Switch, Route} from 'react-router-dom'
 import Home from './containers/Home'
 import About from './containers/About'
 import Antd from './containers/Antd'
@@ -11,7 +11,7 @@ import {
   ABOUT_PAGE_URL,
   ANTD_DEMO_PAGE_URL,
   EMPLOYEE_DETAIL_URL,
-  EMPLOYEE_LIST_URL
+  EMPLOYEE_LIST_URL,
 } from './constants/url'
 
 const Routes = () => (
@@ -20,11 +20,7 @@ const Routes = () => (
     <Route exact path={ABOUT_PAGE_URL} component={About} />
     <Route exact path={ANTD_DEMO_PAGE_URL} component={Antd} />
     <Route exact path={EMPLOYEE_LIST_URL} component={EmployeeList} />
-    <Route
-      exact
-      path={`${EMPLOYEE_DETAIL_URL}/:employeeId`}
-      component={EmployeeDetail}
-    />
+    <Route exact path={`${EMPLOYEE_DETAIL_URL}/:employeeId`} component={EmployeeDetail} />
   </Switch>
 )
 

@@ -1,12 +1,12 @@
 import React from 'react'
-import { Table, Spin } from 'antd'
+import {Table, Spin} from 'antd'
+import {Link} from 'react-router-dom'
 import ErrorBoundry from '../shared/ErrorBoundry'
-import { Link } from 'react-router-dom'
 import Header from '../shared/Header'
 import TopGrid from '../shared/TopGrid'
 import Error from '../shared/Error'
 
-import { EMPLOYEE_DETAIL_URL } from '../../constants/url'
+import {EMPLOYEE_DETAIL_URL} from '../../constants/url'
 
 class EmployeeList extends React.Component {
   componentDidMount() {
@@ -18,15 +18,10 @@ class EmployeeList extends React.Component {
   }
 
   render() {
-    const { employeeList } = this.props
+    const {employeeList} = this.props
 
     if (employeeList.error) {
-      return (
-        <Error
-          statusText={employeeList.statusText}
-          statusCode={employeeList.statusCode}
-        />
-      )
+      return <Error statusText={employeeList.statusText} statusCode={employeeList.statusCode} />
     }
 
     const dataSource = employeeList.data || []
@@ -34,16 +29,14 @@ class EmployeeList extends React.Component {
       {
         title: 'Id',
         dataIndex: 'id',
-        key: 'id'
+        key: 'id',
       },
       {
         title: 'Name',
         dataIndex: 'employee_name',
         key: 'name',
-        render: (text, record) => (
-          <Link to={`${EMPLOYEE_DETAIL_URL}/${record.id}`}>{text}</Link>
-        )
-      }
+        render: (text, record) => <Link to={`${EMPLOYEE_DETAIL_URL}/${record.id}`}>{text}</Link>,
+      },
     ]
 
     return (
@@ -53,11 +46,7 @@ class EmployeeList extends React.Component {
           {employeeList.isRequested ? (
             <Spin size="large" />
           ) : (
-            <Table
-              rowKey={dataSource => dataSource.id}
-              dataSource={dataSource}
-              columns={columns}
-            />
+            <Table rowKey={dataSource => dataSource.id} dataSource={dataSource} columns={columns} />
           )}
         </ErrorBoundry>
       </TopGrid>

@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/aj-anuragjain/react-custom-boilerplate.svg?branch=master)](https://travis-ci.org/aj-anuragjain/react-custom-boilerplate)
+
 # Boilerplate with Create-React-App && Redux
 
 **Prerequisite(s)**

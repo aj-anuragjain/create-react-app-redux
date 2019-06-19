@@ -1,11 +1,11 @@
-import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
+import {connect} from 'react-redux'
+import {bindActionCreators} from 'redux'
 import EmployeeDetail from '../../components/employee/EmployeeDetail'
-import { clearEmployeeDetail, requestEmployeeDetail } from '../../actions'
+import {clearEmployeeDetail, requestEmployeeDetail} from '../../actions'
 
 function mapStateToProps(state) {
   return {
-    employeeDetail: state.employeeDetail
+    employeeDetail: state.employeeDetail,
   }
 }
 
@@ -13,7 +13,7 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators(
     {
       clearEmployeeDetail,
-      requestEmployeeDetail
+      requestEmployeeDetail,
     },
     dispatch
   )

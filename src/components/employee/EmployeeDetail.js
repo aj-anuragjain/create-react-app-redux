@@ -1,5 +1,5 @@
-import React, { Fragment } from 'react'
-import { Typography, Spin, Alert, Divider } from 'antd'
+import React, {Fragment} from 'react'
+import {Typography, Spin, Alert, Divider} from 'antd'
 import Header from '../shared/Header'
 import TopGrid from '../shared/TopGrid'
 import Error from '../shared/Error'
@@ -7,7 +7,7 @@ import Error from '../shared/Error'
 class EmployeeList extends React.Component {
   componentDidMount() {
     const {
-      match: { params }
+      match: {params},
     } = this.props
     this.props.requestEmployeeDetail(params.employeeId)
   }
@@ -17,16 +17,11 @@ class EmployeeList extends React.Component {
   }
 
   render() {
-    const { employeeDetail } = this.props
-    const { Title } = Typography
+    const {employeeDetail} = this.props
+    const {Title} = Typography
 
     if (employeeDetail.error) {
-      return (
-        <Error
-          statusText={employeeDetail.statusText}
-          statusCode={employeeDetail.statusCode}
-        />
-      )
+      return <Error statusText={employeeDetail.statusText} statusCode={employeeDetail.statusCode} />
     }
 
     return (

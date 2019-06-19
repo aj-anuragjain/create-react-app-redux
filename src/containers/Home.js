@@ -1,18 +1,13 @@
-import { connect } from 'react-redux'
+import {connect} from 'react-redux'
+import {bindActionCreators} from 'redux'
 import Home from '../components/home/Home'
-import { bindActionCreators } from 'redux'
-import {
-  increment,
-  incrementAsync,
-  decrement,
-  decrementAsync
-} from '../actions'
+import {increment, incrementAsync, decrement, decrementAsync} from '../actions'
 
 function mapStateToProps(state) {
   return {
     count: state.counter.count,
     isIncrementing: state.counter.isIncrementing,
-    isDecrementing: state.counter.isDecrementing
+    isDecrementing: state.counter.isDecrementing,
   }
 }
 
@@ -22,7 +17,7 @@ function mapDispatchToProps(dispatch) {
       increment,
       incrementAsync,
       decrement,
-      decrementAsync
+      decrementAsync,
     },
     dispatch
   )

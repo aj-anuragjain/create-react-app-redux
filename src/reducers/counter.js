@@ -1,9 +1,9 @@
-import { counterInitialState } from './initialState'
+import {counterInitialState} from './initialState'
 import {
   INCREMENT_REQUESTED,
   INCREMENT,
   DECREMENT_REQUESTED,
-  DECREMENT
+  DECREMENT,
 } from '../constants/actionTypes'
 
 export default (state = counterInitialState, action) => {
@@ -13,27 +13,27 @@ export default (state = counterInitialState, action) => {
       // never alter previousState state variable
       return {
         ...state,
-        isIncrementing: true
+        isIncrementing: true,
       }
 
     case INCREMENT:
       return {
         ...state,
         count: state.count + 1,
-        isIncrementing: !state.isIncrementing
+        isIncrementing: !state.isIncrementing,
       }
 
     case DECREMENT_REQUESTED:
       return {
         ...state,
-        isDecrementing: true
+        isDecrementing: true,
       }
 
     case DECREMENT:
       return {
         ...state,
         count: state.count - 1,
-        isDecrementing: !state.isDecrementing
+        isDecrementing: !state.isDecrementing,
       }
 
     default:

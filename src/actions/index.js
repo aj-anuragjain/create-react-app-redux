@@ -1,7 +1,7 @@
-import { increment, incrementAsync } from './increment'
-import { decrement, decrementAsync } from './decrement'
-import { clearEmployeeList, requestEmployeeList } from './employeeList'
-import { clearEmployeeDetail, requestEmployeeDetail } from './employeeDetail'
+import {increment, incrementAsync} from './increment'
+import {decrement, decrementAsync} from './decrement'
+import {clearEmployeeList, requestEmployeeList} from './employeeList'
+import {clearEmployeeDetail, requestEmployeeDetail} from './employeeDetail'
 
 export {
   increment,
@@ -11,5 +11,5 @@ export {
   clearEmployeeList,
   requestEmployeeList,
   clearEmployeeDetail,
-  requestEmployeeDetail
+  requestEmployeeDetail,
 }

@@ -1,13 +1,13 @@
 export const counterInitialState = {
   count: 0,
   isIncrementing: false,
-  isDecrementing: false
+  isDecrementing: false,
 }
 
 export const errorInitialState = {
   error: false,
   stateCode: '',
-  statusText: ''
+  statusText: '',
 }
 
 export const employeeDetailInitialState = {
@@ -15,9 +15,9 @@ export const employeeDetailInitialState = {
   employee_name: '',
   employee_salary: '',
   employee_age: '',
-  profile_image: ''
+  profile_image: '',
 }
 
 export const employeeListInitialState = {
-  data: []
+  data: [],
 }

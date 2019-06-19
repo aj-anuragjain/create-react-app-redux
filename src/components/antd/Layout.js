@@ -1,8 +1,8 @@
 import React from 'react'
-import { Layout, Divider } from 'antd'
+import {Layout, Divider} from 'antd'
 
 function LayoutDemo() {
-  const { Header, Footer, Content } = Layout
+  const {Header, Footer, Content} = Layout
 
   return (
     <div>

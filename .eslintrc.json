@@ -15,27 +15,29 @@
   },
   "parser": "babel-eslint",
   "rules": {
-    "indent": ["error", 2, { "SwitchCase": 1 }],
+    "prettier/prettier": "error",
+    "semi": [2, "never"],
+    "indent": ["error", 2, {"SwitchCase": 1}],
     "object-curly-spacing": ["error", "never"],
     "react/jsx-filename-extension": [".js"],
-    "space-before-blocks": ["error", "never"],
+    "space-before-blocks": ["error", "always"],
     "space-before-function-paren": ["error", "never"],
     "keyword-spacing": [
       "error",
       {
         "overrides": {
-          "if": { "after": false },
-          "else": { "after": false },
-          "for": { "after": false }
+          "if": {"after": true},
+          "else": {"after": true},
+          "for": {"after": true}
         }
       }
     ],
-    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
-    "no-use-before-define": ["error", { "functions": false, "classes": false }],
+    "no-plusplus": ["error", {"allowForLoopAfterthoughts": true}],
+    "no-use-before-define": ["error", {"functions": false, "classes": false}],
     "camelcase": 0,
     "no-unused-vars": [
       "error",
-      { "vars": "local", "args": "none", "ignoreRestSiblings": false }
+      {"vars": "local", "args": "none", "ignoreRestSiblings": false}
     ],
     "react/forbid-prop-types": 0,
     "react/prop-types": 0,
@@ -52,6 +54,7 @@
     "react/no-array-index-key": 0,
     "no-shadow": 1,
     "no-useless-escape": 1,
-    "consistent-return": 0
+    "consistent-return": 0,
+    "no-underscore-dangle": ["error", {"allow": ["__REDUX_DEVTOOLS_EXTENSION__"]}]
   }
 }

@@ -1,12 +1,12 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { Menu } from 'antd'
+import {Link} from 'react-router-dom'
+import {Menu} from 'antd'
 
 import {
   HOME_PAGE_URL,
   ABOUT_PAGE_URL,
   ANTD_DEMO_PAGE_URL,
-  EMPLOYEE_LIST_URL
+  EMPLOYEE_LIST_URL,
 } from '../../constants/url'
 
 function Header() {

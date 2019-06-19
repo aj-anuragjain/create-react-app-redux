@@ -1,9 +1,15 @@
-import React, { Fragment } from 'react'
-import { Carousel, Divider } from 'antd'
+import React, {Fragment} from 'react'
+import {Carousel, Divider} from 'antd'
 
 import './style/carousel.css'
 
 class CarouselDemo extends React.Component {
+  constructor(props) {
+    super(props)
+    this.onChange = this.onChange.bind(this)
+  }
+
+  // eslint-disable-next-line class-methods-use-this
   onChange(a, b, c) {
     console.log(a, b, c)
   }
@@ -11,7 +17,7 @@ class CarouselDemo extends React.Component {
   render() {
     return (
       <Fragment>
-        <Carousel afterChange={this.onChange}>
+        <Carousel afterChange={() => this.onChange}>
           <div>
             <h3>1</h3>
           </div>

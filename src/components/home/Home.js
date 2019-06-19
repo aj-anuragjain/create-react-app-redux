@@ -1,7 +1,7 @@
 import React from 'react'
+import {Button} from 'antd'
 import Header from '../shared/Header'
 import TopGrid from '../shared/TopGrid'
-import { Button } from 'antd'
 
 import './sytle/home.css'
 
@@ -13,7 +13,7 @@ function Home(props) {
     decrement,
     decrementAsync,
     isIncrementing,
-    isDecrementing
+    isDecrementing,
   } = props
 
   return (
@@ -26,10 +26,7 @@ function Home(props) {
         <Button type="primary" onClick={increment}>
           Increment
         </Button>
-        <Button
-          type="danger"
-          onClick={incrementAsync}
-          disabled={isIncrementing}>
+        <Button type="danger" onClick={incrementAsync} disabled={isIncrementing}>
           Increment Async
         </Button>
       </p>
@@ -38,10 +35,7 @@ function Home(props) {
         <Button type="primary" onClick={decrement}>
           Decrement
         </Button>
-        <Button
-          type="danger"
-          onClick={decrementAsync}
-          disabled={isDecrementing}>
+        <Button type="danger" onClick={decrementAsync} disabled={isDecrementing}>
           Decrement Async
         </Button>
       </p>

@@ -1,12 +1,12 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
-import { HOME_PAGE_URL } from '../../constants/url'
+import {HOME_PAGE_URL} from '../../constants/url'
 
 import './style/error.css'
 
 function ErrorComponent(props) {
-  const { statusCode, statusText } = props
+  const {statusCode, statusText} = props
   return (
     <div id="notfound">
       <div className="notfound">
