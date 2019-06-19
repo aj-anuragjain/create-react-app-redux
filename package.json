@@ -43,7 +43,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "eslint src/"
+      "pre-commit": "npm run build"
     }
   },
   "browserslist": [
