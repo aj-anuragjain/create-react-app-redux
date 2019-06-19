@@ -4,11 +4,14 @@
   "description": "react custom boilerplate with redux, react-router, eslint, prettier",
   "private": false,
   "scripts": {
+    "prestart": "npm run eslint",
     "start": "react-scripts start",
     "start:prod": "serve -s ./build",
+    "prebuild": "npm run eslint",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "eslint": "eslint ./src"
   },
   "devDependencies": {
     "eslint-config-airbnb": "^17.1.0",

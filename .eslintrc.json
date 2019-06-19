@@ -15,16 +15,28 @@
   },
   "parser": "babel-eslint",
   "rules": {
-    "indent": ["error", 2, {"SwitchCase": 1 }],
+    "indent": ["error", 2, { "SwitchCase": 1 }],
     "object-curly-spacing": ["error", "never"],
     "react/jsx-filename-extension": [".js"],
     "space-before-blocks": ["error", "never"],
     "space-before-function-paren": ["error", "never"],
-    "keyword-spacing": ["error", {"overrides": {"if": {"after": false}, "else": {"after": false}, "for": {"after": false}}}],
-    "no-plusplus": ["error", {"allowForLoopAfterthoughts": true}],
-    "no-use-before-define": ["error", { "functions": false, "classes": false}],
+    "keyword-spacing": [
+      "error",
+      {
+        "overrides": {
+          "if": { "after": false },
+          "else": { "after": false },
+          "for": { "after": false }
+        }
+      }
+    ],
+    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+    "no-use-before-define": ["error", { "functions": false, "classes": false }],
     "camelcase": 0,
-    "no-unused-vars": ["error", {"vars": "local", "args": "none", "ignoreRestSiblings": false}],
+    "no-unused-vars": [
+      "error",
+      { "vars": "local", "args": "none", "ignoreRestSiblings": false }
+    ],
     "react/forbid-prop-types": 0,
     "react/prop-types": 0,
     "react/button-has-type": 0,
