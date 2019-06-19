@@ -43,10 +43,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": [
-        "pretty-quick --staged",
-        "eslint src/ --fix"
-      ]
+      "pre-commit": "eslint src/"
     }
   },
   "browserslist": [
